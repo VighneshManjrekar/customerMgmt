@@ -1,0 +1,250 @@
+@CustomerManagement.API_HostAddress = http://localhost:5056
+
+GET {{CustomerManagement.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+POST {{CustomerManagement.API_HostAddress}}/api/product
+Content-Type: application/json
+
+{
+  "IsSubscribable": false,
+  "ProductName": "Another Sample Product 3",
+  "ProductDescription": "Sample Product Description",
+  "ProductPrice": 99.99,
+  "IsActive": true,
+  "IGstRate": 18.5,
+  "CGstRate": 9.0,
+  "UTGstRate": 9.0,
+  "SGstRate": 0.0,
+  "StartDate": null,
+  "EndDate": null,
+  "CreatedDate": "2024-07-15T10:30:00+00:00",
+  "CreatedBy": 1,
+  "UpdatedDate": "2024-07-15T10:30:00+00:00",
+  "UpdatedBy": 1,
+  "DurationInDays": 0
+}
+
+
+###
+
+GET {{CustomerManagement.API_HostAddress}}/api/product
+
+###
+
+GET {{CustomerManagement.API_HostAddress}}/api/product/2
+
+###
+
+DELETE {{CustomerManagement.API_HostAddress}}/api/product/2
+
+###
+
+PUT {{CustomerManagement.API_HostAddress}}/api/product/2
+Content-Type: application/json
+
+{
+    "ProductId":21,
+  "IsSubscribable": false,
+  "ProductName": "Another Sample Product",
+  "ProductDescription": "Another Sample Product Description",
+  "ProductPrice": 99.99,
+  "IsActive": true,
+  "IGstRate": 18.5, 
+  "CGstRate": 9.0,
+  "UTGstRate": 9.0,
+  "SGstRate": 0.0,
+  "StartDate": null,
+  "EndDate": null,
+  "CreatedDate": "2024-07-15T10:30:00+00:00",
+  "CreatedBy": 1,
+  "UpdatedDate": "2024-07-15T10:30:00+00:00",
+  "UpdatedBy": 1,
+  "DurationInDays": 0
+}
+
+###
+
+###
+
+GET {{CustomerManagement.API_HostAddress}}/api/role
+
+###
+
+POST {{CustomerManagement.API_HostAddress}}/api/role
+Content-Type: application/json
+
+{
+    "RoleName": "Test",
+    "IsActive":true,
+    "createdBy":1,
+    "updatedBy":1
+}
+
+###
+
+GET {{CustomerManagement.API_HostAddress}}/api/role/6
+
+###
+
+DELETE {{CustomerManagement.API_HostAddress}}/api/role/5
+
+###
+
+PUT {{CustomerManagement.API_HostAddress}}/api/role/4
+Content-Type: application/json
+
+{
+    "RoleId":4,
+    "RoleName": "test again",
+    "IsActive":true,
+    "createdBy":1,
+    "updatedBy":1
+}
+
+###
+
+GET {{CustomerManagement.API_HostAddress}}/api/gender
+
+###
+
+POST {{CustomerManagement.API_HostAddress}}/api/gender
+Content-Type: application/json
+
+{
+  "GenderName":"Test again 2",
+  "createdBy":1,
+  "updatedBy":1
+}
+
+###
+
+
+GET {{CustomerManagement.API_HostAddress}}/api/gender/8
+
+###
+
+PUT {{CustomerManagement.API_HostAddress}}/api/gender/8
+Content-Type: application/json
+
+{
+    "GenderId":8,
+    "GenderName":"Change Test 1",
+    "updatedBy":1
+}
+
+###
+
+DELETE {{CustomerManagement.API_HostAddress}}/api/gender/7
+
+###
+
+GET {{CustomerManagement.API_HostAddress}}/api/user
+
+###
+
+GET {{CustomerManagement.API_HostAddress}}/api/user
+
+###
+
+GET {{CustomerManagement.API_HostAddress}}/api/user/2
+
+###
+
+POST {{CustomerManagement.API_HostAddress}}/api/user
+Content-Type: application/json
+
+{
+        "UserName":"Test User 2",
+        "Phone": "123456780",
+        "Email":"test02mail.com",
+        "Password":"test123",
+        "Address":"Airoli",
+        "IsActive":true,
+        "CreatedBy":1,
+        "UpdatedBy":1,
+        "GenderId":1,
+        "RoleId":2
+}
+
+###
+
+PUT {{CustomerManagement.API_HostAddress}}/api/user/0
+Content-Type: application/json
+
+"string"
+
+###
+
+PUT {{CustomerManagement.API_HostAddress}}/api/user/4
+Content-Type: application/json
+
+{
+        "UserId":4,
+        "UserName":"Test User 2",
+        "Phone": "123456780",
+        "Email":"test02mail.com",
+        "Password":"test123",
+        "Address":"Airoli",
+        "IsActive":true,
+        "CreatedBy":1,
+        "UpdatedBy":1,
+        "GenderId":1,
+        "RoleId":2
+}
+
+###
+
+PUT {{CustomerManagement.API_HostAddress}}/api/user/4
+Content-Type: application/json
+
+{
+        "UserId":4,
+        "UserName":"Test User 14",
+        "Phone": "123456780",
+        "Email":"test04mail.com",
+        "Password":"test123",
+        "Address":"Airoli",
+        "IsActive":true,
+        "UpdatedBy":1,
+        "GenderId":1,
+        "RoleId":1
+}
+
+###
+
+DELETE {{CustomerManagement.API_HostAddress}}/api/user/4
+
+###
+
+GET {{CustomerManagement.API_HostAddress}}/api/role
+
+###
+
+POST {{CustomerManagement.API_HostAddress}}/api/order
+Content-Type: application/json
+
+{
+    "Discount": 0,
+    "UserId": 3,
+    "CreatedBy": 3,
+    "UpdatedBy": 3,
+    "CurrentOrderDetails": [
+        {
+            "Quantity": 1,
+            "Discount": 0,
+            "ProductId": 1
+        }
+    ]
+}
+
+###
+
+PUT {{CustomerManagement.API_HostAddress}}/api/order/4
+Content-Type: application/json
+
+"string"
+
+###
